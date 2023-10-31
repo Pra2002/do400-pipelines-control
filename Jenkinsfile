@@ -13,10 +13,12 @@ pipeline{
             }
         }
         stage('backend'){
-            sh 'node ./simple-webapp/backend/test.js'
+            steps{sh 'node ./simple-webapp/backend/test.js'}
+            
         }
          stage('frontend'){
-            sh 'node ./simple-webapp/frontend/test.js'
+            steps{sh 'node ./simple-webapp/frontend/test.js'}
+            
         }
 
     }
